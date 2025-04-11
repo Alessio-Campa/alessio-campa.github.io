@@ -1,0 +1,14 @@
+button {
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    margin: 4px;
+    background-color: dodgerblue;
+    font-weight: bold;
+    color: white;
+}
+
+#leva__root > div {
+    position: absolute;
+    top: 72px;
+}

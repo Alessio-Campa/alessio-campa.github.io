@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom";
 import {ReactNode} from "react";
-import navbarItem from "./NavbarItem";
 
 interface MenuItemProps {
   children: ReactNode;
@@ -11,7 +10,7 @@ interface MenuItemProps {
 const MenuTabItem = ({children, href, isActive = false}: MenuItemProps) => {
   return (
     <div className={`menu-tab-item ${isActive ? "active" : ""}`}>
-      <Link to={href}>
+      <Link className="navbar-item" to={href}>
         {children}
       </Link>
     </div>

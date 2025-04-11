@@ -25,12 +25,12 @@ const PaperItem = ({name, authors, date, publication, fileName, doi, fullWidth =
           </div>
           <div className="buttons-container">
             {doi &&
-            <a href={`https://doi.org/${doi}`} target="_blank" className="paper-button open-button">
+            <a href={`https://doi.org/${doi}`} target="_blank" rel="noreferrer" className="paper-button open-button">
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{marginRight: "0.75rem"}}/>
               DOI
             </a>
             }
-            <a href={`/papers/${fileName}.pdf`} target="_blank" className="paper-button download-button">
+            <a href={`/papers/${fileName}.pdf`} target="_blank" rel="noreferrer" className="paper-button download-button">
               <FontAwesomeIcon icon={faFileArrowDown} style={{marginRight: "0.75rem"}}/>
               Open PDF
             </a>

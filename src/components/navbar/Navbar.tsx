@@ -4,12 +4,11 @@ import {Link, useLocation} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import MenuTabItem from "./MenuTabItem";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 
 const Navbar = () => {
   const {pathname} = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const ref = useRef(null);
 
   const handleClick = () => {
     setIsMenuOpen(false);

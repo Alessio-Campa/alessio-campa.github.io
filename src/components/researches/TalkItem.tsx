@@ -22,7 +22,7 @@ const TalkItem = ({name, date, conference, location, fileName, fullWidth = false
             <h4 style={{fontWeight: "normal"}}>At <i>{conference}</i>; {location}; {date.toLocaleDateString()}</h4>
           </div>
           <div className="buttons-container">
-            <a href={`/talks/${fileName}.pdf`} target="_blank" className="paper-button download-button">
+            <a href={`/talks/${fileName}.pdf`} target="_blank" rel="noreferrer" className="paper-button download-button">
               <FontAwesomeIcon icon={faFileArrowDown} style={{marginRight: "0.75rem"}}/>
               Open PDF
             </a>

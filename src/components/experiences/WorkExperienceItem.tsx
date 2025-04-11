@@ -1,5 +1,4 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGraduationCap} from "@fortawesome/free-solid-svg-icons/faGraduationCap";
 import {faComputer} from "@fortawesome/free-solid-svg-icons";
 import Markdown from "react-markdown";
 
