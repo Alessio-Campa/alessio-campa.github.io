@@ -16,42 +16,58 @@ const LinkItem = ({url, icon, backgroundColor, title}: LinkItemProps) => {
   const [isOver, setIsOver] = useState(false);
   if (url === "https://x.com/AlessioCampa_") {
     return (
-      <a
-        id="twitter-bubble"
-        className="link-bubble"
-        style={{
-          backgroundColor: !isOver ? backgroundColor : "#1DA1F2",
-      }}
-        href={url}
-        target="_blank"
-        rel="noreferrer"
-        onMouseEnter={() => setIsOver(true)}
-        onMouseLeave={() => setIsOver(false)}
-        title={title}
-      >
-        <h1>
-          {!isOver ?
-            <FontAwesomeIcon icon={icon}/>
-            :
-            <FontAwesomeIcon icon={faTwitter}/>
-          }
-        </h1>
-      </a>
+      <div>
+        <div style={{width: '100%', display: "flex", justifyContent: "center"}}>
+          <a
+            id="twitter-bubble"
+            className="link-bubble"
+            style={{
+              backgroundColor: !isOver ? backgroundColor : "#1DA1F2",
+            }}
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            onMouseEnter={() => setIsOver(true)}
+            onMouseLeave={() => setIsOver(false)}
+            title={title}
+          >
+            <h1>
+              {!isOver ?
+                <FontAwesomeIcon icon={icon}/>
+                :
+                <FontAwesomeIcon icon={faTwitter}/>
+              }
+            </h1>
+          </a>
+        </div>
+        {!isOver ?
+          <h6 style={{textAlign: "center", marginTop: 4}}>X</h6>
+          :
+          <h6 style={{textAlign: "center", marginTop: 4}}>Twitter</h6>
+
+        }
+      </div>
     )
   }
   return (
-    <a
-      className="link-bubble"
-      style={{backgroundColor}}
-      href={url}
-      target="_blank"
-      rel="noreferrer"
-      title={title}
-    >
-      <h1>
-        <FontAwesomeIcon icon={icon}/>
-      </h1>
-    </a>
+    <div>
+      <div style={{width:'100%', display:"flex", justifyContent:"center"}}>
+        <a
+          className="link-bubble"
+          style={{backgroundColor}}
+          href={url}
+          target="_blank"
+          rel="noreferrer"
+          title={title}
+        >
+          <h1>
+            <FontAwesomeIcon icon={icon}/>
+          </h1>
+        </a>
+      </div>
+
+      <h6 style={{textAlign: "center", marginTop: 4}}>{title}</h6>
+    </div>
   )
 }
 
@@ -78,7 +94,7 @@ const links: LinkItemProps[] = [
     url: "https://www.unive.it/data/persone/28847327",
     icon: faUser,
     backgroundColor: "#9e1f36",
-    title: "Ca' Foscari People"
+    title: "Unive"
   },
 ]
 

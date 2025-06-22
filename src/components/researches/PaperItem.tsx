@@ -20,7 +20,18 @@ const PaperItem = ({name, authors, date, publication, fileName, doi, fullWidth =
         <div className="paper-detail">
           <div>
             <h3 style={{marginTop: 0 }}>{name}</h3>
-            <h4>Authors: <span style={{fontWeight: "normal"}}>{authors.join(", ")}</span></h4>
+            <h4>Authors:{" "}
+              {authors.map((name, i) =>
+                <span
+                  style={{fontWeight: "normal"}}
+                >
+                  <span style={{textDecoration: name === "Alessio Campanelli" ? "underline" : "normal"}}>
+                    {name}
+                  </span>
+                  {i !== authors.length -1 ? ", " : ""}
+                </span>
+              )}
+            </h4>
             <h4 style={{fontWeight: "normal"}}>In <i>{publication}</i>, {date.getFullYear()}</h4>
           </div>
           <div className="buttons-container">

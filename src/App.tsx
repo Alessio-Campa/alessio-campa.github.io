@@ -6,6 +6,7 @@ import HomeScreen from "./screens/HomeScreen";
 import Navbar from "./components/navbar/Navbar";
 import ResearchScreen from "./screens/ResearchScreen";
 import MelindaCubeScreen from "./screens/MelindaCubeScreen";
+import InventoryScreen from "./screens/InventoryScreen";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<HomeScreen />}/>
             <Route path="/about" element={<AboutScreen />}/>
             <Route path="/research" element={<ResearchScreen />}/>
+            <Route path="/inventory" element={<InventoryScreen />}/>
           </Routes>
         </div>
         <Routes>
