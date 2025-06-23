@@ -28,7 +28,7 @@ const papers: Paper[] = [
     name: "Fast pseudoalignment queries on compressed colored de Bruijn graphs",
     authors: ["Alessio Campanelli", "Giulio Ermanno Pibiri", "Rob Patro"],
     date: new Date(2025, 8),
-    publication: "25th International Workshop on Algorithms in Bioinformatics",
+    publication: "25th International Conference on Algorithms in Bioinformatics",
     fileName: "WABI_25",
     // doi: "10.1089/cmb.2024.0714"
   },
